@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* アプリ基調色（正）。theme.ts と同値を維持する */
+  --app-bg: #fff8f5;
+  --app-surface: #fffcfa;
+  --app-primary: #f4a98f;
+  --app-primary-hover: #e8957a;
+  --app-accent: #f7c6d8;
+  --app-text: #4a3a38;
+  --app-text-muted: #8a7470;
+  --app-border: #f0ddd6;
+  --app-error: #d64545;
+  --app-primary-foreground: #4a3a38;
+  --app-bg-gradient: linear-gradient(
+    165deg,
+    #fff8f5 0%,
+    #ffe8df 45%,
+    #fce8f0 100%
+  );
+  --font-app-sans: var(--font-geist-sans);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-app-bg: var(--app-bg);
+  --color-app-surface: var(--app-surface);
+  --color-app-primary: var(--app-primary);
+  --color-app-primary-hover: var(--app-primary-hover);
+  --color-app-accent: var(--app-accent);
+  --color-app-text: var(--app-text);
+  --color-app-text-muted: var(--app-text-muted);
+  --color-app-border: var(--app-border);
+  --color-app-error: var(--app-error);
+  --color-app-primary-foreground: var(--app-primary-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-app: var(--font-app-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.auth-screen-bg {
+  background: var(--app-bg-gradient);
+}
