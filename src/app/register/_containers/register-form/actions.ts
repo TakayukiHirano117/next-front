@@ -19,9 +19,13 @@ export async function registerAction(
   }
 
   try {
+    const { birthDate, ...rest } = submission.value;
     await apiFetch("/members", okResponseSchema, {
       method: "POST",
-      body: submission.value,
+      body: {
+        ...rest,
+        birthDate: birthDate.replaceAll("-", "/"),
+      },
       forwardCookies: false,
     });
     redirect("/login");

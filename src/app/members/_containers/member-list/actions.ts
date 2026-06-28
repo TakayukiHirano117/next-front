@@ -19,7 +19,7 @@ export async function sendLikeAction(formData: FormData) {
     revalidatePath("/members");
   } catch (error) {
     if (error instanceof ApiClientError || error instanceof ApiConfigError) {
-      throw new Error(error.message);
+      return;
     }
 
     throw error;
