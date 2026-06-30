@@ -122,3 +122,9 @@ use. Bring the same intentionality to copy as to spacing and color.
 - Treat failure and emptiness as moments for direction, not mood. Explain
   what went wrong and how to fix it.
 - Plain verbs, sentence case, no filler, tone matched to brand and audience.
+
+## Macching app UI (learned)
+
+- **Mobile matching shell**: card grid (2-col), profile photo prominent, compact header (brand + scene label)—not admin-style page titles like「会員一覧」at top.
+- **Bottom nav**: frosted bar, `bottom-5` margin; icons by meaning (compass=探す, heart=いいね). Labels optional.
+- **Glass readability**: content behind blur darkens the bar—`bg-white/90+`, `backdrop-brightness-110`, `text-app-text` (not muted) on nav items. Readability beats transparency.
